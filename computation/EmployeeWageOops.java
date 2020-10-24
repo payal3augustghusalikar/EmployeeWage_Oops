@@ -3,6 +3,8 @@ package computation;
 	import java.util.ArrayList;
 	import java.util.HashMap;
 
+import com.computation.EmployeeWageOops;
+
 	class EmployeeWageOops implements InEmployeeWageOops {
 	//constants
 	public static final int IS_FULL_TIME=1;
@@ -65,3 +67,16 @@ package computation;
 	public int getTotalEmpWage(String company) {
 	  return CompanyEmpWageMap.get(company).totalEmpWage;
 	}
+	public static void main(String[] args) {
+		  EmployeeWageOops empWageBuilder = new EmployeeWageOops();
+		  empWageBuilder.addCompanyEmpWage("sbi", 50, 20, 100);
+		  empWageBuilder.addCompanyEmpWage("sc", 40, 20, 100);
+		  empWageBuilder.addCompanyEmpWage("boi", 30, 20, 100);
+		  empWageBuilder.addCompanyEmpWage("uco", 30, 20, 100);
+		  empWageBuilder.addCompanyEmpWage("sbi", 50, 20, 100);
+		  empWageBuilder.computeEmpWage();
+		  System.out.println("Total wage of the searched company: " + empWageBuilder.getTotalEmpWage("sbi"));
+		} //main
+		// class
+		}
+
